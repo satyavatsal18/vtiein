@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Register form</title>
+       <link rel="stylesheet" href="satya1.css">
+         <script src="https://kit.fontawesome.com/5c0510f9cc.js" crossorigin="anonymous"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <script>
+        function radioclick(){
+    if(document.getElementById("doctor").checked){
+        document.getElementById("Regno").style.display='block';
+        document.getElementById("Aadno").style.display='block';
+        document.getElementById("Hosno").style.display='block';
+        document.getElementById("Colnm").style.display='none';
+        document.getElementById("stuadhaarno").style.display='none';
+        document.getElementById("location").style.display="none";
+        document.getElementById("Occupation").style.display="none";
+
+    }
+}
+function radioclick2(){
+    if(document.getElementById("student").checked){
+        document.getElementById("Colnm").style.display='block';
+        document.getElementById("stuadhaarno").style.display='block';
+        document.getElementById("Regno").style.display='none';
+        document.getElementById("Aadno").style.display='none';
+        document.getElementById("Hosno").style.display='none';
+        document.getElementById("location").style.display="none";
+        document.getElementById("Occupation").style.display="none";
+
+
+    }
+}
+function radioclick3(){
+    if(document.getElementById("Others").checked){
+        document.getElementById("location").style.display="block";
+        document.getElementById("Occupation").style.display="block";
+        document.getElementById("Colnm").style.display='none';
+        document.getElementById("stuadhaarno").style.display='none';
+        document.getElementById("Regno").style.display='none';
+        document.getElementById("Aadno").style.display='none';
+        document.getElementById("Hosno").style.display='none';
+    }
+}
+
+    </script>
+</head>
+
+    <body>
+
+    <div class="container">
+      <div class="top_bar">
+      <div class="brand_logo">
+        <p style="color:white;font-size:1.5em;position:relative;top:-30px;">VTie-In</p>
+      </div>
+          <div class="search_bar">
+            <input style="background:white;color:black;" id="Searchbar" placeholder="Search" type="text" name="" value="">
+            <div class="s_icon">
+              <i class="fas fa-search"></i>
+            </div>
+          </div>
+
+          <div class="list">
+            <ul>
+              <li><i class="fas fa-home"></i> Home</li>
+              <li><i class="fas fa-phone"></i> Contact</li>
+              <li><i class="fas fa-headset"></i> Support</li>
+
+            </ul>
+          </div>
+          <div class="hamburger" id="hamburger">
+            <i onclick="openNav()" class="fas fa-bars"></i>
+
+            </div>
+
+        </div>
+        <h2>V-TIE IN </h2>
+        <h6>A CARE THAT NEVER QUITS .</h6>
+        <div class="container2">
+           <div class="container3">
+            <form id="V-TIEINSIGNIN">
+                <table>
+                    <tr>
+                        <td>
+                            <ul>
+                       <li> FirstName:&nbsp &nbsp &nbsp<input type="text"placeholder="FirstName"></li>
+                      <li> MiddleName:&nbsp<input type="text"placeholder="MiddleName"></li>
+                      <li> LastName:&nbsp &nbsp &nbsp<input type="text"placeholder="LastName"></li>
+                        </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Age:
+                            </td>
+
+
+                                <td>
+                                    <input type="Age" placeholder="Age" Age="">
+                                </td>
+                            </tr>
+    <tr>
+        <td>
+            UserName:
+        </td>
+
+
+        <td>
+            <input type="UserName" placeholder="Username" Username="">
+        </td>
+    </tr>
+
+
+
+
+
+                    <tr>
+                        <td>
+                            Password:
+                        </td>
+
+                    <td>
+                        <input type="Password" placeholder="Password" Password="">
+                    </td>
+                    <tr>
+                        <td>
+                            Gender:
+                        </td>
+                        <td>
+                            <input type="radio" name="Gender" id="Male">
+                            <label for="Male">Male</label>
+                            <input type="radio" name="Gender" id="female">
+                            <label for="female">female</label>
+                            <input type="radio" name="Gender" id="Others1">
+                            <label type="Others">Others</label>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Proffesion:
+                        </td>
+                        <td>
+                        <input type="radio" name="Proffesion" id="doctor" onclick="radioclick()">
+                         <label for="doctor"> doctor</label>
+
+                        <input type="radio" name="Proffesion" id="student" onclick="radioclick2()">
+                        <label for="student"> Student</label>
+                        <input type="radio" name="Proffesion" id="Others"onclick="radioclick3()">
+                        <label for="Others"> Others</label>
+
+
+
+
+
+
+                        </td>
+                    </tr>
+                    <tr id="Regno" style="display:none;">
+                        <td>
+                            <label for="RegistrationNumber">Registration Number:</label>
+                        </td>
+                        <td>
+                            <input type="text" id="RegistrationNumber">
+                        </td>
+                    </tr>
+                    <tr id="Hosno" style="display: none;">
+                        <td>
+                            <label for="HospitalNumber">Hospital Number:</label>
+                        </td>
+                        <td>
+                            <input type="text" id="HospitalNumber">
+                        </td>
+                    </tr>
+                    <tr id="Aadno" style="display:none;">
+
+                        <td>
+                            <label for="AadharNumber">Aadhar Number:</label>
+                        </td>
+                        <td>
+                            <input type="text" id="AadharNumber">
+                        </td>
+                    </tr>
+                    <tr id="Colnm" style="display:none;">
+                        <td>
+                            <label for="CollegeName">College Name:</label>
+                        </td>
+                        <td>
+                            <input type="text" id="CollegeName">
+                        </td>
+
+                    </tr>
+                    <tr id="stuadhaarno" style="display:none;">
+                        <td>
+                            <label for="stuadhaar">AadharNumber:</label>
+                        </td>
+                        <td>
+                            <input type="text" id="stuadhaar">
+                        </td>
+
+                    </tr>
+                    <tr id="location" style="display:none;">
+                        <td>
+                            <label for="loc">location:</label>
+                        </td>
+                        <td>
+                            <input type="text" id="loc">
+                        </td>
+
+                    </tr>
+                    <tr id="Occupation" style="display:none;">
+                        <td>
+                            <label for="occ">Occupation:</label>
+                        </td>
+                        <td>
+                            <input type="text" id="occ">
+                        </td>
+
+                    </tr>
+
+
+
+
+
+
+
+
+
+                    <tr>
+                        <td>
+                            MoblieNumber:
+                        </td>
+
+
+                        <td>
+                    <input type="MoblieNumber" placeholder="MoblieNumber" MoblieNumber="">
+                    </td>
+                    </tr>
+                </table>
+            </form>
+            <button type="Submit" form="V-TIEINSIGNIN" value="Submit">Submit</button>
+
+           </div>
+        </div>
+
+
+
+    </div>
+ </body>
+    </html>
